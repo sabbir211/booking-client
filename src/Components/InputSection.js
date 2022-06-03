@@ -73,7 +73,7 @@ const InputSection = ({ refetch }) => {
             </div>
 
             <div>
-                <button onClick={handleSubmit} className="btn btn-primary">Submit</button>
+                <button onClick={handleSubmit} className="btn btn-primary">Book Now</button>
             </div>
 
         </div>

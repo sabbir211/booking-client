@@ -17,6 +17,7 @@ if(isLoading){
 
   return (
     <div>
+      <h1 className='fs-2 text-center my-3'>Hotel Booking Form </h1>
      <InputSection refetch={refetch}></InputSection>
      <DisplayDate x={data}></DisplayDate>
     </div>
