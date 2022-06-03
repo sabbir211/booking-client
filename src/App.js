@@ -5,7 +5,7 @@ import DisplayDate from './Components/DisplayDate';
 import React,{useEffect,useState} from 'react';
 import { useQuery } from 'react-query';
 function App() {
- const { isLoading, error, data,refetch } = useQuery('e', () =>fetch('http://localhost:5000/dates').then(res =>
+ const { isLoading, error, data,refetch } = useQuery('e', () =>fetch('https://booking-pial.herokuapp.com/dates').then(res =>
    res.json()
  )
 )

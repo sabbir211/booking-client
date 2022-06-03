@@ -14,7 +14,7 @@ const InputSection = ({ refetch }) => {
         const end = format(endDate, "yyyy-MM-dd")
         
         if (name && start && end) {
-            fetch("http://localhost:5000/addDate", {
+            fetch("https://booking-pial.herokuapp.com/addDate", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
