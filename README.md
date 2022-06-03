@@ -1,6 +1,6 @@
 # Hotel Booking Form
 
-Live site [Link](https://github.com/facebook/create-react-app).
+Live site [Link](https://hotel-booking-86956.web.app/).
 
 Server side [code](https://github.com/sabbir211/booking-server)
 ## Packages / Library used
