@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-
+import InputSection from './Components/InputSection';
+import DisplayDate from './Components/DisplayDate';
+import React,{useEffect,useState} from 'react';
+import { useQuery } from 'react-query';
 function App() {
+ const { isLoading, error, data,refetch } = useQuery('e', () =>fetch('http://localhost:5000/dates').then(res =>
+   res.json()
+ )
+)
+if(isLoading){
+  return <p>Loading... </p>
+}
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <InputSection refetch={refetch}></InputSection>
+     <DisplayDate x={data}></DisplayDate>
     </div>
   );
 }
